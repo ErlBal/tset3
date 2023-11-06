@@ -1,0 +1,18 @@
+{% load static %}
+{% include 'games_template/header.html' %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<center>
+    <h1>Авторизация</h1>
+</center>
+
+<center>
+    <form method="POST" enctype="multipart/form-data" class="air">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">Авторизация</button>
+        <button><a href="/registrations/">У вас нет аккаунта</a></button>
+    </form>
+</center>
+
+{% include 'games_template/footer.html' %}

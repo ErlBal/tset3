@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail</title>
+</head>
+<body>
+<h1>{{object.name}}</h1>
+<img src="{{object.image.url}}" alt="" width="600" height="400">
+<ul>
+       {% for hashtag in object.tags.all %}
+       <li>
+           <h3>{{hashtag.name}}</h3>
+       </li>
+       {% endfor %}
+   </ul>
+</body>
+</html>

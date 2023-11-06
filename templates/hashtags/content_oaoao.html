@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Оаоао</title>
+</head>
+<body>
+<h1>Общ кнтнт</h1>
+<ol>
+  {% for i in object_list %}
+  <li>
+      <a href="/content/{{i.id}}/">{{i.name}}</a>
+  </li>
+  {% endfor %}
+</ol>
+</body>
+</html>

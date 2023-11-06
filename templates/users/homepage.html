@@ -1,0 +1,23 @@
+{% load static %}
+{% include 'games_template/header.html' %}
+
+<center>
+    <h1>Вы прошли регистрацию/авторизацию</h1>
+</center>
+
+<center>
+<ol>
+    {% for i in object_list %}
+
+        {{ i.title }}
+        <br>
+        <img src="{{i.image.url}}" alt="">
+
+    {% endfor %}
+    <form action="{% url 'users:logout' %}">
+        {% csrf_token %}
+        <button type="submit">Выйти из акаунта</button>
+    </form>
+</ol>
+</center>
+{% include 'games_template/footer.html' %}
